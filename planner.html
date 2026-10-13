@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Study Planner — AI Academic Success Assistant</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📅</text></svg>">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Desktop Left Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Main Navigation">
+      <a href="index.html" class="sidebar-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">Academic Assistant</span>
+          <span class="brand-badge">AI-Receptive Prototype</span>
+        </div>
+      </a>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Academic Workspace</div>
+        
+        <a href="index.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="planner.html" class="nav-link active" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+          <span>Smart Study Planner</span>
+        </a>
+
+        <a href="assistant.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+          <span>AI Academic Assistant</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="profile-card">
+          <div class="profile-avatar" aria-hidden="true">AM</div>
+          <div class="profile-details">
+            <div class="profile-name">Alex Morgan</div>
+            <div class="profile-meta">B.Tech Computer Science (Sem 4)</div>
+            <div class="profile-hours-pill">
+              <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>2.0h / day target</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-actions">
+          <button type="button" class="btn btn-sm btn-secondary action-reset-demo" style="width: 100%;">
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>
+            <span>Reset Demo Data</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Container -->
+    <div class="main-wrapper">
+      <!-- Mobile Header -->
+      <header class="mobile-header">
+        <a href="index.html" class="mobile-brand">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--color-primary)" stroke-width="2" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span>Academic Assistant</span>
+        </a>
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </header>
+
+      <main class="content-container">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="page-title-group">
+            <h1>Smart Study Planner</h1>
+            <p class="page-subtitle">Turn your academic deadlines into a realistic, manageable study plan.</p>
+          </div>
+
+          <div class="page-header-actions">
+            <a href="index.html" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><polyline points="15 18 9 12 15 6"/></svg>
+              <span>Back to Dashboard</span>
+            </a>
+            <a href="assistant.html" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+              <span>Ask AI Assistant</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Explanatory Banner -->
+        <div class="banner banner-prototype">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <div>
+            <strong>How the Smart Planner Works:</strong> The algorithm calculates task urgency from your real deadlines, difficulty ratings, and remaining effort. It splits work into manageable sessions, interleaves topics to prevent cognitive fatigue, and strictly respects your daily available study hours.
+          </div>
+        </div>
+
+        <!-- 2-Column Planner Grid -->
+        <div class="planner-layout-grid">
+          <!-- Left Column: Preferences & Task Selection Form -->
+          <div class="planner-config-panel">
+            <form id="plannerConfigForm">
+              <!-- Preferences Card -->
+              <div class="card" style="margin-bottom: 1.25rem;">
+                <h2 style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary); margin-bottom: 1rem;">
+                  1. Study Preferences
+                </h2>
+
+                <div class="form-group">
+                  <label for="inputDailyHours" class="form-label">
+                    Daily Available Study Time (Hours)
+                    <span class="form-label-desc">Maximum study hours you can commit per day</span>
+                  </label>
+                  <input type="number" id="inputDailyHours" class="form-input" min="0.5" max="12" step="0.5" value="2.0" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="selectHorizon" class="form-label">
+                    Planning Horizon
+                    <span class="form-label-desc">Time window to distribute sessions</span>
+                  </label>
+                  <select id="selectHorizon" class="form-select">
+                    <option value="1">Today (Next 24 hours)</option>
+                    <option value="3">3 Days (Short-term focus)</option>
+                    <option value="7" selected>7 Days (Weekly balanced schedule)</option>
+                  </select>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="selectSessionDuration" class="form-label">Session Length</label>
+                    <select id="selectSessionDuration" class="form-select">
+                      <option value="30" selected>30 mins</option>
+                      <option value="45">45 mins</option>
+                      <option value="60">60 mins</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="selectBreakDuration" class="form-label">Break Duration</label>
+                    <select id="selectBreakDuration" class="form-select">
+                      <option value="5" selected>5 mins</option>
+                      <option value="10">10 mins</option>
+                      <option value="15">15 mins</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="selectPriorityPref" class="form-label">
+                    Priority Preference
+                    <span class="form-label-desc">How tasks should be ordered</span>
+                  </label>
+                  <select id="selectPriorityPref" class="form-select">
+                    <option value="balanced" selected>Balanced Approach (Urgency + Difficulty)</option>
+                    <option value="deadline">Closest Deadlines First (Avoid late submissions)</option>
+                    <option value="difficulty">Most Difficult First (Tackle high-load work early)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Task Selection Card -->
+              <div class="card" style="margin-bottom: 1.25rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.85rem;">
+                  <h2 style="font-size: 1.1rem; font-weight: 700; color: var(--color-primary);">
+                    2. Select Tasks to Plan
+                  </h2>
+                  <div style="display: flex; gap: 0.35rem;">
+                    <button type="button" class="btn btn-sm btn-secondary" id="btnSelectAllTasks" style="padding: 0.2rem 0.5rem; font-size: 0.72rem;">All</button>
+                    <button type="button" class="btn btn-sm btn-secondary" id="btnDeselectAllTasks" style="padding: 0.2rem 0.5rem; font-size: 0.72rem;">None</button>
+                  </div>
+                </div>
+
+                <div class="tasks-selection-list" id="tasksSelectionList">
+                  <!-- Dynamically populated -->
+                </div>
+
+                <div style="margin-top: 0.85rem; text-align: right;">
+                  <button type="button" class="btn btn-sm btn-secondary" id="btnOpenAddTaskFromPlanner">
+                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                    <span>Add Another Task</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Prominent Generation Button -->
+              <button type="submit" class="btn btn-primary" id="btnGeneratePlanSubmit" style="width: 100%; padding: 0.85rem; font-size: 1rem;">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                <span>Generate My Study Plan</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Generated Plan Output -->
+          <div class="plan-output-wrapper" id="planOutputArea">
+            <!-- Dynamically populated by planner.js -->
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Reusable Add / Edit Task Modal Dialog for Planner -->
+  <div class="modal-overlay" id="taskModal" role="dialog" aria-modal="true" aria-labelledby="taskModalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="taskModalTitle">Add Academic Task</h3>
+        <button type="button" class="modal-close-btn" aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <form id="taskForm">
+        <input type="hidden" id="taskIdInput">
+        <div class="modal-body">
+          <div class="form-group" id="taskTitleGroup">
+            <label for="taskTitle" class="form-label">Task Title <span style="color:var(--color-danger)">*</span></label>
+            <input type="text" id="taskTitle" class="form-input" placeholder="e.g. Operating Systems Lab Assignment" required>
+            <div class="form-error-msg">Task title is required.</div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="taskSubjectGroup">
+              <label for="taskSubject" class="form-label">Subject / Course</label>
+              <input type="text" id="taskSubject" class="form-input" placeholder="e.g. Operating Systems">
+            </div>
+
+            <div class="form-group" id="taskTypeGroup">
+              <label for="taskType" class="form-label">Task Type</label>
+              <select id="taskType" class="form-select">
+                <option value="Assignment">Assignment</option>
+                <option value="Examination">Examination</option>
+                <option value="Revision">Revision</option>
+                <option value="Practice">Practice</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="taskDeadlineGroup">
+              <label for="taskDeadline" class="form-label">Deadline</label>
+              <input type="date" id="taskDeadline" class="form-input">
+            </div>
+
+            <div class="form-group" id="taskEffortGroup">
+              <label for="taskEffort" class="form-label">Estimated Effort (Hours) <span style="color:var(--color-danger)">*</span></label>
+              <input type="number" id="taskEffort" class="form-input" min="0.5" max="40" step="0.5" value="2.0" required>
+              <div class="form-error-msg">Please enter a valid effort between 0.5 and 40 hours.</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="taskDifficultyGroup">
+              <label for="taskDifficulty" class="form-label">Difficulty Level</label>
+              <select id="taskDifficulty" class="form-select">
+                <option value="Low">Low</option>
+                <option value="Medium" selected>Medium</option>
+                <option value="High">High</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="taskStatusGroup" style="display: none;">
+              <label for="taskStatus" class="form-label">Status</label>
+              <select id="taskStatus" class="form-select">
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="taskNotes" class="form-label">Notes (Optional)</label>
+            <textarea id="taskNotes" class="form-textarea" rows="2" placeholder="Key chapters, exercise numbers, or reference materials..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary modal-cancel-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Shared JavaScript Files -->
+  <script src="js/data.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AcademicApp.initNavigation();
+      AcademicPlanner.initPlannerPage();
+
+      // Hook up Add Task button from inside planner
+      const addTaskBtn = document.getElementById('btnOpenAddTaskFromPlanner');
+      if (addTaskBtn) {
+        addTaskBtn.addEventListener('click', () => {
+          document.getElementById('taskModalTitle').textContent = 'Add Academic Task';
+          document.getElementById('taskForm').reset();
+          document.getElementById('taskIdInput').value = '';
+          document.getElementById('taskDeadline').value = AcademicData.getRelativeDate(3);
+          document.querySelectorAll('.form-group').forEach(fg => fg.classList.remove('has-error'));
+          AcademicApp.openModal('taskModal');
+        });
+      }
+
+      // Hook up modal submit
+      const taskForm = document.getElementById('taskForm');
+      if (taskForm) {
+        taskForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const title = document.getElementById('taskTitle').value.trim();
+          const effort = parseFloat(document.getElementById('taskEffort').value);
+          if (!title) {
+            document.getElementById('taskTitleGroup').classList.add('has-error');
+            return;
+          }
+          if (isNaN(effort) || effort <= 0) {
+            document.getElementById('taskEffortGroup').classList.add('has-error');
+            return;
+          }
+
+          const res = AcademicData.addTask({
+            title: title,
+            subject: document.getElementById('taskSubject').value.trim() || 'General Academic',
+            type: document.getElementById('taskType').value,
+            deadline: document.getElementById('taskDeadline').value,
+            effortHours: effort,
+            difficulty: document.getElementById('taskDifficulty').value,
+            status: 'Pending',
+            notes: document.getElementById('taskNotes').value.trim()
+          });
+
+          if (res.success) {
+            AcademicApp.closeModal('taskModal');
+            AcademicApp.showToast(`Task "${title}" added. You can now include it in your study plan.`, 'success');
+            AcademicPlanner.renderTasksSelectionList();
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>

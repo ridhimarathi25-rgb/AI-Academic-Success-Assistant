@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard — AI Academic Success Assistant</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Desktop Left Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Main Navigation">
+      <a href="index.html" class="sidebar-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">Academic Assistant</span>
+          <span class="brand-badge">AI-Receptive Prototype</span>
+        </div>
+      </a>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Academic Workspace</div>
+        
+        <a href="index.html" class="nav-link active" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="planner.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+          <span>Smart Study Planner</span>
+        </a>
+
+        <a href="assistant.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+          <span>AI Academic Assistant</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="profile-card">
+          <div class="profile-avatar" aria-hidden="true">AM</div>
+          <div class="profile-details">
+            <div class="profile-name">Alex Morgan</div>
+            <div class="profile-meta">B.Tech Computer Science (Sem 4)</div>
+            <div class="profile-hours-pill">
+              <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>2.0h / day target</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-actions">
+          <button type="button" class="btn btn-sm btn-secondary action-reset-demo" style="width: 100%;">
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>
+            <span>Reset Demo Data</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Container -->
+    <div class="main-wrapper">
+      <!-- Mobile Header -->
+      <header class="mobile-header">
+        <a href="index.html" class="mobile-brand">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--color-primary)" stroke-width="2" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span>Academic Assistant</span>
+        </a>
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </header>
+
+      <main class="content-container">
+        <!-- Top Page Header -->
+        <div class="page-header">
+          <div class="page-title-group">
+            <h1 id="studentGreeting">Welcome back, Alex!</h1>
+            <p class="page-subtitle" id="currentDateDisplay">Loading academic calendar...</p>
+          </div>
+
+          <div class="page-header-actions">
+            <button type="button" class="btn btn-primary" id="btnOpenAddTask">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span>Add Academic Task</span>
+            </button>
+            <a href="planner.html" class="btn btn-accent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+              <span>Smart Study Planner</span>
+            </a>
+            <a href="assistant.html" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+              <span>Ask AI Assistant</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4 Summary Metric Cards -->
+        <section class="grid-cards" aria-label="Academic Workload Metrics">
+          <div class="card metric-card">
+            <div class="metric-header">
+              <span class="metric-title">Pending Tasks</span>
+              <div class="metric-icon-wrap pending">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+            </div>
+            <div class="metric-value" id="metricPendingCount">0</div>
+            <div class="metric-subtitle">Requires study or submission</div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="metric-header">
+              <span class="metric-title">Upcoming Deadlines</span>
+              <div class="metric-icon-wrap upcoming">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+            </div>
+            <div class="metric-value" id="metricUpcomingCount">0</div>
+            <div class="metric-subtitle">Due within the next 7 days</div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="metric-header">
+              <span class="metric-title">Completed Tasks</span>
+              <div class="metric-icon-wrap completed">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+            <div class="metric-value" id="metricCompletedCount">0</div>
+            <div class="metric-subtitle">Finished coursework</div>
+          </div>
+
+          <div class="card metric-card">
+            <div class="metric-header">
+              <span class="metric-title">Daily Study Time</span>
+              <div class="metric-icon-wrap hours">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/></svg>
+              </div>
+            </div>
+            <div class="metric-value" id="metricStudyHours">2.0h</div>
+            <div class="metric-subtitle">
+              <button type="button" id="btnEditStudyHours" style="background:none;border:none;color:var(--color-accent);font-weight:600;cursor:pointer;padding:0;font-size:inherit;">
+                Click to adjust preference &rarr;
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- AI Academic Insight Banner -->
+        <section id="aiInsightSection" class="ai-insight-card" aria-label="Personalized Academic Insight">
+          <!-- Dynamically populated by app.js -->
+        </section>
+
+        <!-- Workload Overview Progress -->
+        <section class="workload-card" aria-label="Workload Progress">
+          <div class="workload-header">
+            <h2 class="workload-title">Overall Coursework Progress</h2>
+            <div class="workload-meta" id="workloadProgressDetail">Calculating progress...</div>
+          </div>
+
+          <div class="progress-track" id="workloadProgressTrack" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Coursework completion percentage">
+            <div class="progress-fill" id="workloadProgressFill" style="width: 0%;"></div>
+          </div>
+
+          <div class="workload-legend">
+            <div class="legend-item">
+              <div class="legend-dot completed"></div>
+              <span id="workloadProgressText">0% Completed</span>
+            </div>
+            <div class="legend-item">
+              <div class="legend-dot pending"></div>
+              <span>Remaining Pending Tasks</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Upcoming Academic Tasks Table & Controls -->
+        <section id="tasks" aria-label="Upcoming Academic Tasks">
+          <div class="section-header">
+            <h2 class="section-title">Academic Tasks & Deadlines</h2>
+
+            <div class="table-controls">
+              <div>
+                <label for="filterTasksSelect" class="form-label" style="display:inline; margin-right:0.35rem; font-size:0.8rem;">Filter:</label>
+                <select id="filterTasksSelect" class="form-select" style="width: auto; display: inline-block; padding: 0.4rem 0.65rem; font-size: 0.82rem;">
+                  <option value="all">All Tasks</option>
+                  <option value="pending">Pending Only</option>
+                  <option value="inprogress">In Progress</option>
+                  <option value="completed">Completed</option>
+                  <option value="exam">Examinations & Quizzes</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="sortTasksSelect" class="form-label" style="display:inline; margin-right:0.35rem; font-size:0.8rem;">Sort:</label>
+                <select id="sortTasksSelect" class="form-select" style="width: auto; display: inline-block; padding: 0.4rem 0.65rem; font-size: 0.82rem;">
+                  <option value="urgency">Urgency & Priority</option>
+                  <option value="deadline">Closest Deadline</option>
+                  <option value="difficulty">Highest Difficulty</option>
+                  <option value="title">Task Title (A-Z)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-wrapper" id="tasksTableWrapper">
+            <table class="data-table" aria-label="Tasks list">
+              <thead>
+                <tr>
+                  <th scope="col" style="min-width: 220px;">Task & Notes</th>
+                  <th scope="col">Subject</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Deadline</th>
+                  <th scope="col">Difficulty</th>
+                  <th scope="col">Effort</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" style="text-align: right; min-width: 140px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="tasksTableBody">
+                <!-- Dynamically populated by app.js -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Empty State (shown when task list is empty) -->
+          <div class="empty-state card" id="tasksEmptyState" style="display: none;">
+            <div class="empty-state-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="empty-state-title">No tasks found</h3>
+            <p class="empty-state-text">You don't have any academic tasks matching the current filter. Add a new coursework task or reset to default demo data.</p>
+            <button type="button" class="btn btn-primary" onclick="document.getElementById('btnOpenAddTask').click()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span>Add Academic Task</span>
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Add / Edit Task Modal Dialog -->
+  <div class="modal-overlay" id="taskModal" role="dialog" aria-modal="true" aria-labelledby="taskModalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 class="modal-title" id="taskModalTitle">Add New Academic Task</h3>
+        <button type="button" class="modal-close-btn" aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <form id="taskForm">
+        <input type="hidden" id="taskIdInput">
+        <div class="modal-body">
+          <div class="form-group" id="taskTitleGroup">
+            <label for="taskTitle" class="form-label">Task Title <span style="color:var(--color-danger)">*</span></label>
+            <input type="text" id="taskTitle" class="form-input" placeholder="e.g. Data Structures Assignment, Chem Lab Report" required>
+            <div class="form-error-msg">Task title is required.</div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="taskSubjectGroup">
+              <label for="taskSubject" class="form-label">Subject / Course</label>
+              <input type="text" id="taskSubject" class="form-input" placeholder="e.g. Computer Science, Mathematics">
+            </div>
+
+            <div class="form-group" id="taskTypeGroup">
+              <label for="taskType" class="form-label">Task Type</label>
+              <select id="taskType" class="form-select">
+                <option value="Assignment">Assignment</option>
+                <option value="Examination">Examination</option>
+                <option value="Revision">Revision</option>
+                <option value="Practice">Practice</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="taskDeadlineGroup">
+              <label for="taskDeadline" class="form-label">Submission / Exam Deadline</label>
+              <input type="date" id="taskDeadline" class="form-input">
+            </div>
+
+            <div class="form-group" id="taskEffortGroup">
+              <label for="taskEffort" class="form-label">Estimated Effort (Hours) <span style="color:var(--color-danger)">*</span></label>
+              <input type="number" id="taskEffort" class="form-input" min="0.5" max="40" step="0.5" value="2.0" required>
+              <div class="form-error-msg">Please enter a valid effort between 0.5 and 40 hours.</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group" id="taskDifficultyGroup">
+              <label for="taskDifficulty" class="form-label">Difficulty Level</label>
+              <select id="taskDifficulty" class="form-select">
+                <option value="Low">Low (Basic recall / brief exercises)</option>
+                <option value="Medium" selected>Medium (Standard problem set / chapter review)</option>
+                <option value="High">High (Complex algorithmic proof / major project)</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="taskStatusGroup" style="display: none;">
+              <label for="taskStatus" class="form-label">Status</label>
+              <select id="taskStatus" class="form-select">
+                <option value="Pending">Pending</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="taskNotes" class="form-label">Notes or Key Topics (Optional)</label>
+            <textarea id="taskNotes" class="form-textarea" rows="2" placeholder="e.g. Focus on recursive tree traversal and balancing algorithms..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary modal-cancel-btn">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Shared JavaScript Files -->
+  <script src="js/data.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AcademicApp.initNavigation();
+      AcademicApp.initDashboard();
+    });
+  </script>
+</body>
+</html>

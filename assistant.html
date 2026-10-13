@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Academic Assistant — Academic Support Prototype</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Desktop Left Sidebar -->
+    <aside class="sidebar" id="sidebar" aria-label="Main Navigation">
+      <a href="index.html" class="sidebar-brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">Academic Assistant</span>
+          <span class="brand-badge">AI-Receptive Prototype</span>
+        </div>
+      </a>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Academic Workspace</div>
+        
+        <a href="index.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="planner.html" class="nav-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+          <span>Smart Study Planner</span>
+        </a>
+
+        <a href="assistant.html" class="nav-link active" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+          <span>AI Academic Assistant</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="profile-card">
+          <div class="profile-avatar" aria-hidden="true">AM</div>
+          <div class="profile-details">
+            <div class="profile-name">Alex Morgan</div>
+            <div class="profile-meta">B.Tech Computer Science (Sem 4)</div>
+            <div class="profile-hours-pill">
+              <svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>2.0h / day target</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-actions">
+          <button type="button" class="btn btn-sm btn-secondary action-reset-demo" style="width: 100%;">
+            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>
+            <span>Reset Demo Data</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Container -->
+    <div class="main-wrapper">
+      <!-- Mobile Header -->
+      <header class="mobile-header">
+        <a href="index.html" class="mobile-brand">
+          <svg viewBox="0 0 24 24" width="22" height="22" stroke="var(--color-primary)" stroke-width="2" fill="none"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span>Academic Assistant</span>
+        </a>
+        <button type="button" class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </header>
+
+      <main class="content-container">
+        <!-- Page Header -->
+        <div class="page-header">
+          <div class="page-title-group">
+            <h1>AI Academic Assistant</h1>
+            <p class="page-subtitle">Get help organizing your academic workload and improving your study routine.</p>
+          </div>
+
+          <div class="page-header-actions">
+            <a href="planner.html" class="btn btn-accent">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+              <span>Smart Study Planner</span>
+            </a>
+            <a href="index.html" class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+              <span>Back to Dashboard</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Prototype Mode Disclosure Banner -->
+        <div class="banner banner-prototype">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <div>
+            <strong>Prototype Mode — Simulated AI Responses:</strong> This assistant uses deterministic, context-aware rule templates mapped to your live student deadlines, difficulty ratings, and study hours. No external cloud or paid language model is connected.
+          </div>
+        </div>
+
+        <!-- Chat Interface Box -->
+        <div class="chat-container">
+          <!-- Chat Header Bar -->
+          <div class="chat-header">
+            <div class="chat-assistant-meta">
+              <div class="assistant-avatar" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+              </div>
+              <div>
+                <div class="chat-assistant-title">Academic Study Copilot</div>
+                <div class="chat-assistant-subtitle">Context-Aware Advisory Engine &bull; Ready</div>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-sm btn-secondary" id="btnClearChat">
+              <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M3 6h18"/><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"/><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/></svg>
+              <span>Clear Conversation</span>
+            </button>
+          </div>
+
+          <!-- Suggested Questions Chips Bar -->
+          <div class="chat-suggestions-bar" aria-label="Suggested Planning Prompts">
+            <button type="button" class="suggestion-chip" data-prompt="What should I study first?">
+              🎯 What should I study first?
+            </button>
+            <button type="button" class="suggestion-chip" data-prompt="Help me prepare for my upcoming exams.">
+              📝 Help me prepare for upcoming exams
+            </button>
+            <button type="button" class="suggestion-chip" data-prompt="How can I manage multiple deadlines?">
+              ⚖️ How can I manage multiple deadlines?
+            </button>
+            <button type="button" class="suggestion-chip" data-prompt="Create a balanced study routine.">
+              ⏰ Create a balanced study routine
+            </button>
+            <button type="button" class="suggestion-chip" data-prompt="What should I do if I fall behind?">
+              🛡️ What should I do if I fall behind?
+            </button>
+          </div>
+
+          <!-- Chat Messages Body -->
+          <div class="chat-messages" id="chatMessages" role="log" aria-live="polite">
+            <!-- Dynamically populated by assistant.js -->
+          </div>
+
+          <!-- Chat Input Area -->
+          <div class="chat-input-area">
+            <form class="chat-input-form" id="chatForm">
+              <input 
+                type="text" 
+                class="chat-input" 
+                id="chatInput" 
+                placeholder="Ask about your coursework, exam strategies, or daily planning..." 
+                autocomplete="off" 
+                required
+              >
+              <button type="submit" class="btn btn-primary" id="btnSendMessage" aria-label="Send message">
+                <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <span>Send</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Shared JavaScript Files -->
+  <script src="js/data.js"></script>
+  <script src="js/planner.js"></script>
+  <script src="js/assistant.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AcademicApp.initNavigation();
+      AcademicAssistant.initAssistantPage();
+    });
+  </script>
+</body>
+</html>
